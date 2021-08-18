@@ -115,10 +115,22 @@ this.tank = this.tank + gallons;
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby() {
+function Baby(name,age,favoriteToy) {
+  Person.call(this,name,age);
+  this.favoriteToy = favoriteToy;
  
 }
+Baby.prototype = Object.create(Person.prototype);
+Baby.prototype.play = function(favoriteToy){
 
+  return `Playing with ${this.favoriteToy}`;
+}
+
+const test = new Baby('test','test','test-toy');
+
+
+console.log(test);
+console.log(test.play());
 
 /* 
   TASK 4
