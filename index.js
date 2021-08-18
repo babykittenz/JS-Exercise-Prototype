@@ -135,10 +135,10 @@ console.log(test.play());
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. function called by new 
+  2. call apply or bind
+  3. method in obj function
+  4. Global this windowed
 */
 
 
